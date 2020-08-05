@@ -1,22 +1,43 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import PageHeader from '../../components/PageHeader';
 
-import backIcon from '../../assets/images/icons/back.svg';
-import logoImg from '../../assets/images/logo.svg';
+import './styles.css';
+import TeacherItem from '../../components/TeacherItem';
 function TeacherList() {
   return (
     <div id="page-teacher-list" className="container">
-      <header className="page-header">
-        <div className="top-bar-container">
-          <Link to="/">
-            <img src={backIcon} alt="" />
-          </Link>
-          <img src={logoImg} alt="" />
-        </div>
-        <div className="header-content">
-          <strong>Estes são os proffys disponíveis</strong>
-        </div>
-      </header>
+      <PageHeader title="Estes são os proffys disponíveis.">
+        <form id="search-teachers">
+          <div className="input-block">
+            <label htmlFor="subject">
+              Matéria
+              <input type="text" name="subject" id="subject" />
+            </label>
+          </div>
+
+          <div className="input-block">
+            <label htmlFor="week_day">
+              Dia da semana
+              <input type="text" name="week_day" id="week_day" />
+            </label>
+          </div>
+
+          <div className="input-block">
+            <label htmlFor="time">
+              Hora
+              <input type="text" name="time" id="time" />
+            </label>
+          </div>
+        </form>
+      </PageHeader>
+
+      <main>
+        <TeacherItem />
+        <TeacherItem />
+        <TeacherItem />
+        <TeacherItem />
+        <TeacherItem />
+      </main>
     </div>
   );
 }

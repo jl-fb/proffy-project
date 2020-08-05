@@ -2,6 +2,7 @@
   font-size: 1px;
 
   --color-background: #f0f0f7;
+  --color-background-dark: #000000;
   --color-primary-lighter: #9871f5;
   --color-primary-light: #916bea;
   --color-primary: #8257e5;
@@ -48,6 +49,7 @@ input,
 button,
 textarea {
   font: 500 16rem Poppins;
+  color: var(--color-text-base);
 }
 
 .container {
