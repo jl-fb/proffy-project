@@ -47,7 +47,7 @@
   text-decoration: none;
   color: var(--color-button-text);
 
-  transition: background-color 0.2s;
+  transition: background-color 200ms;
 }
 
 .buttons-container a:first-child {
@@ -63,14 +63,14 @@
   background: var(--color-primary-lighter);
 }
 .buttons-container a.give-classes {
-  background: var(--color-secundary);
+  background: var(--color-secondary);
 }
 
 .buttons-container a.study:hover {
   background: var(--color-primary-light);
 }
 .buttons-container a.give-classes:hover {
-  background: var(--color-secundary-dark);
+  background: var(--color-secondary-dark);
 }
 
 .total-connections {

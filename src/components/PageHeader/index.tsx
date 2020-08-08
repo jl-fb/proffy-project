@@ -4,10 +4,8 @@ import { Link } from 'react-router-dom';
 import './styles.css';
 import backIcon from '../../assets/images/icons/back.svg';
 import logoImg from '../../assets/images/logo.svg';
+import { PageHeaderProps } from '../../models/model';
 
-interface PageHeaderProps {
-  title: string;
-}
 const PageHeader: React.FC<PageHeaderProps> = (props) => {
   return (
     <header className="page-header">
@@ -20,6 +18,8 @@ const PageHeader: React.FC<PageHeaderProps> = (props) => {
 
       <div className="header-content">
         <strong>{props.title}</strong>
+        {props.description && <p>{props.description}</p>}
+
         {props.children}
       </div>
     </header>
