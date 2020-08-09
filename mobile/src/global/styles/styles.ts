@@ -7,8 +7,12 @@ const colors = {
   textPurpleLight: '#D4C2FF',
   inactiveTab: '#FAFAFC',
   inactiveTabText: '#C1BCCC',
-  ActiveTabText: '#32264D',
-  ActiveBar: '#EBEBF5',
+  activeTabText: '#32264D',
+  activeBar: '#EBEBF5',
+  listBorder: '#E6E6F0',
+  listSubject: '#6A6180',
+  favorited: '#E33D3D',
+
 }
 
 export default colors

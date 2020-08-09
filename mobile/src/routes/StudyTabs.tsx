@@ -33,8 +33,8 @@ function StudyTabs() {
         },
         inactiveBackgroundColor: colors.inactiveTab,
         inactiveTintColor: colors.inactiveTabText,
-        activeBackgroundColor: colors.ActiveBar,
-        activeTintColor: colors.ActiveTabText,
+        activeBackgroundColor: colors.activeBar,
+        activeTintColor: colors.activeTabText,
       }}
     >
       <Screen
