@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Image, Text } from 'react-native';
 
 import styles from './styles';
@@ -9,8 +9,23 @@ import heartIcon from '../../global/assets/images/icons/heart.png';
 import giveClassesIcon from '../../global/assets/images/icons/give-classes.png';
 import { useNavigation } from '@react-navigation/native';
 import { RectButton } from 'react-native-gesture-handler';
+import api from '../../service/api';
 function Landing() {
   const { navigate } = useNavigation();
+
+  const [totalConnections, setTotalConnections] = useState(0);
+
+  useEffect(() => {
+    try {
+      api.get('connections').then(async (resp) => {
+        console.log('Resposta total conexões', resp);
+        const { total } = resp.data;
+        setTotalConnections(total);
+      });
+    } catch (error) {
+      console.log('Erro ao conectar com o servidor', error);
+    }
+  }, []);
 
   function handleNaviToClassesPages() {
     navigate('GiveClasses');
@@ -45,7 +60,7 @@ function Landing() {
       </View>
 
       <Text style={styles.totalConnections}>
-        Total de 285 conexões já realizadas {'  '}
+        Total de {totalConnections} conexões já realizadas {'  '}
         <Image source={heartIcon} />
       </Text>
     </View>
